@@ -8,7 +8,7 @@ import os
 
 
 v_regex_fname = os.getcwd()+"/"+"input_regex_"+sys.argv[1]+".txt"
-v_pattern_fname = os.getcwd()+"/"+"input_pattern_"+sys.argv[1]+".txt"
+v_pattern_fname = os.getcwd()+"/"+"Problem"+sys.argv[1]+".txt"
 
 
 if(len(sys.argv) == 2 ):
@@ -30,9 +30,9 @@ def f_check(regex):
 		if(bool(re.match(r"^[#]",line)) or bool(re.match(r"[a-zA-Z\s]*:",line))):
 			print("COMMENT : " + line)
 		elif(bool(re.match(regex,str.replace(line,'\n','')))):
-			print ("PASS : " + line)
+			print ("PASS : " + str.replace(line,'\n',''))
 		else:
-			print ("FAIL : " + line)
+			print ("FAIL : " + str.replace(line,'\n',''))
 			v_flag = False
 	f_pattern.close()
 	return(v_flag)

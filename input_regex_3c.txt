@@ -1,0 +1,1 @@
+^(?i)(january|february|march|april|may|june|july|august|september|october|november|december)*\s\d\d,\s\d{,4}([\s]*)$
